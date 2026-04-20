@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HyperText Design Issues: Topology</title>
+<style>
+    body {
+        font-family: Arial;
+    }
+
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    nav ul li {
+        display: inline;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    details {
+        margin-bottom: 10px;
+    }
+
+    summary {
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <nav aria-label="breadcrumb">
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../index.html">WWW Project</a></li>
+            <li><a href="index.html">Design Issues</a></li>
+            <li>Topology</li>
+        </ul>
+    </nav>
+    <h1>Topology</h1>
+</header>
+
+<main>
+    <p>Here are a few questions about the underlying connectivity of a hypertext web.</p>
+
+    <details>
+        <summary>Are links two- or multi-ended?</summary>
+        <p>The term "link" normally indicates two ends. Variations include links with multiple sources or multiple destinations. Constructs relating more than two anchors map onto logic systems like predicate calculus. For example, the "Aquanet" system from Xerox PARC (paper at HT91). Here we focus on conventional links with two ends.</p>
+    </details>
+
+    <details>
+        <summary>Should the links be monodirectional or bidirectional?</summary>
+        <p>Bidirectional links exist in both directions. Advantage: adds information automatically (e.g., if A includes B, B is part of A). Disadvantage: may constrain the author. KMS and HyperCard have one-way links; Enquire has two-way links. Reverse links can also help manage dangling links in a database.</p>
+        <p>A compromise is to make links one-way in the data model but create a reverse link automatically when allowed. See <a href="building-back-links.html">Building Back-links</a>.</p>
+    </details>
+
+    <details>
+        <summary>Should anchors have more than one link?</summary>
+        <p>One anchor leading to multiple destinations can be ambiguous for the user. A many-to-one mapping is suggested, though <a href="../../about/people/people.html#groff">JFG</a> prefers showing a small menu if a link is ambiguous. Microcosm implements this.</p>
+    </details>
+
+    <details>
+        <summary>Should links be typed?</summary>
+        <p>Typed links carry semantic information to manage data more efficiently. Default type "untyped" exists if types are implemented. See a <a href="link-types.html">list of some types</a>. Links can help with <a href="navigation-overview.html">graphical overviews</a> and <a href="#">automatic tracing</a>.</p>
+        <p>Link typing should not allow multiple types per link; instead, use separate links.</p>
+    </details>
+
+    <details>
+        <summary>Should links contain ancillary information?</summary>
+        <p>Ancillary information includes date, version, authorship, comments. Including this on the link itself can complicate the data model. Better to store in the source node or intermediate annotation node.</p>
+    </details>
+
+    <details>
+        <summary>Should a link contain Preview information?</summary>
+        <p>Preview allows the reader to see the target before following the link. This is optional and usually handled via caching or descriptive highlights. Fast graphic overviews may make a preview unnecessary.</p>
+    </details>
+
+    <p>Other relevant terms: <a href="#">Private overlaid web</a>, <a href="#">Generic Links</a>.</p>
+
+</main>
+
+<footer>
+    <p> CERN — <a href="../../about/people/people.html#cailliau">RC</a></p>
+</footer>
+
+</body>
+</html>
